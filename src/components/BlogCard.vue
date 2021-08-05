@@ -1,13 +1,27 @@
 <template>
-  <div class="card" style="width: 18rem;">
+  <div class="card my-2" style="width: 18rem;">
     <img src="https://picsum.photos/200" class="card-img-top" alt="https://picsum.photos/200">
     <div class="card-body">
       <h5 class="card-title">
-        Card title
+        {{ blog.title }}
       </h5>
       <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk of the card's content.
+        {{ blog.body }}
       </p>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    blog: {
+      type: Object,
+      required: true
+    }
+  },
+  setup() {
+    return {}
+  }
+}
+</script>
