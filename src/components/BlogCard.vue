@@ -1,13 +1,10 @@
 <template>
-  <div class="card my-2" style="width: 18rem;">
-    <img src="https://picsum.photos/200" class="card-img-top" alt="https://picsum.photos/200">
+  <div class="card my-2 action" style="width: 18rem;">
+    <img v-if="blog.imgUrl" :src="blog.imgUrl" class="card-img-top" :alt="blog.title">
     <div class="card-body">
-      <h5 class="card-title">
+      <h5 class="card-title text-center">
         {{ blog.title }}
       </h5>
-      <p class="card-text">
-        {{ blog.body }}
-      </p>
     </div>
   </div>
 </template>
@@ -21,7 +18,8 @@ export default {
     }
   },
   setup() {
-    return {}
+    return {
+    }
   }
 }
 </script>
